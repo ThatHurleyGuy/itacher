@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = Itacher::VERSION
   spec.authors       = ["hurley"]
   spec.email         = ["sean.hurley6@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.summary       = %q{Can be used to control ip2ir devices made by GlobalCache}
+  spec.description   = %q{These devices (http://www.globalcache.com/products/itach/ip2ir-pspecs/) can send IR codes to control TVs, sound systems, etc... }
+  spec.homepage      = "https://github.com/SeanHurley/itacher"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
