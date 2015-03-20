@@ -1,6 +1,6 @@
 # Itacher
 
-TODO: Write a gem description
+This gem can be used to control http://www.globalcache.com/products/itach/ip2ir-pspecs/ devices
 
 ## Installation
 
@@ -20,7 +20,13 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```
+require "itacher"
+
+device = Device.new("192.168.1.XXX", 4998)
+command = device.learn_command
+puts device.send_command(command)
+```
 
 ## Contributing
 
