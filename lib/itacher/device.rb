@@ -1,6 +1,14 @@
 require "socket"
 
 class Device
+  def self.send_commands(ip, port, *commands)
+    device = Device.new(ip, port)
+    commands.each do |command|
+      device.send_command(command)
+    end
+    device.close
+  end
+
   def initialize(ip, port)
     @socket = TCPSocket.new(ip, port)
   end
@@ -15,6 +23,10 @@ class Device
     command = self.read
     send_command("stop_IRL\r")
     command
+  end
+
+  def close
+    @socket.close
   end
 
   private
